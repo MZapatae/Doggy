@@ -12,8 +12,14 @@
 		9F84140F8AE4B3A3BB32A16A /* Pods_DoggyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C8F47F09F25F4544190906 /* Pods_DoggyTests.framework */; };
 		AE12AA032000760600D4BF06 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA022000760600D4BF06 /* AppConstants.swift */; };
 		AE12AA052000768500D4BF06 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA042000768500D4BF06 /* AppRouter.swift */; };
-		AE12AA0A200078A500D4BF06 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA09200078A500D4BF06 /* NavigationController.swift */; };
+		AE12AA0A200078A500D4BF06 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA09200078A500D4BF06 /* NavController.swift */; };
 		AE12AA0C2000790700D4BF06 /* UIColor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE12AA0B2000790700D4BF06 /* UIColor.xcassets */; };
+		AE12AA0F20011DD200D4BF06 /* BreedsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA0E20011DD200D4BF06 /* BreedsContract.swift */; };
+		AE12AA1120011DDF00D4BF06 /* BreedsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA1020011DDF00D4BF06 /* BreedsInteractor.swift */; };
+		AE12AA1320011DEB00D4BF06 /* BreedsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA1220011DEB00D4BF06 /* BreedsPresentation.swift */; };
+		AE12AA1720011E0E00D4BF06 /* BreedsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA1620011E0E00D4BF06 /* BreedsRouter.swift */; };
+		AE12AA1920011E1900D4BF06 /* BreedsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA1820011E1900D4BF06 /* BreedsVC.swift */; };
+		AE12AA1B20011E2A00D4BF06 /* BreedsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE12AA1A20011E2A00D4BF06 /* BreedsView.xib */; };
 		AE53DEF82000723A00089736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53DEF72000723A00089736 /* AppDelegate.swift */; };
 		AE53DEFF2000723A00089736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE53DEFE2000723A00089736 /* Assets.xcassets */; };
 		AE53DF022000723A00089736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE53DF002000723A00089736 /* LaunchScreen.storyboard */; };
@@ -46,8 +52,14 @@
 		8DBC4F41D9E32AFE450D13C9 /* Pods-Doggy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doggy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doggy/Pods-Doggy.debug.xcconfig"; sourceTree = "<group>"; };
 		AE12AA022000760600D4BF06 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		AE12AA042000768500D4BF06 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
-		AE12AA09200078A500D4BF06 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		AE12AA09200078A500D4BF06 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		AE12AA0B2000790700D4BF06 /* UIColor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UIColor.xcassets; sourceTree = "<group>"; };
+		AE12AA0E20011DD200D4BF06 /* BreedsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsContract.swift; sourceTree = "<group>"; };
+		AE12AA1020011DDF00D4BF06 /* BreedsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsInteractor.swift; sourceTree = "<group>"; };
+		AE12AA1220011DEB00D4BF06 /* BreedsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsPresentation.swift; sourceTree = "<group>"; };
+		AE12AA1620011E0E00D4BF06 /* BreedsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsRouter.swift; sourceTree = "<group>"; };
+		AE12AA1820011E1900D4BF06 /* BreedsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsVC.swift; sourceTree = "<group>"; };
+		AE12AA1A20011E2A00D4BF06 /* BreedsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedsView.xib; sourceTree = "<group>"; };
 		AE53DEF42000723A00089736 /* Doggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE53DEF72000723A00089736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE53DEFE2000723A00089736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				AE12AA082000783300D4BF06 /* Core */,
+				AE12AA0D20011D9500D4BF06 /* Breeds */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -156,9 +169,22 @@
 		AE12AA082000783300D4BF06 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				AE12AA09200078A500D4BF06 /* NavigationController.swift */,
+				AE12AA09200078A500D4BF06 /* NavController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		AE12AA0D20011D9500D4BF06 /* Breeds */ = {
+			isa = PBXGroup;
+			children = (
+				AE12AA0E20011DD200D4BF06 /* BreedsContract.swift */,
+				AE12AA1020011DDF00D4BF06 /* BreedsInteractor.swift */,
+				AE12AA1220011DEB00D4BF06 /* BreedsPresentation.swift */,
+				AE12AA1620011E0E00D4BF06 /* BreedsRouter.swift */,
+				AE12AA1820011E1900D4BF06 /* BreedsVC.swift */,
+				AE12AA1A20011E2A00D4BF06 /* BreedsView.xib */,
+			);
+			path = Breeds;
 			sourceTree = "<group>";
 		};
 		AE53DEEB2000723A00089736 = {
@@ -330,6 +356,7 @@
 				AE12AA0C2000790700D4BF06 /* UIColor.xcassets in Resources */,
 				AE53DF022000723A00089736 /* LaunchScreen.storyboard in Resources */,
 				AE53DEFF2000723A00089736 /* Assets.xcassets in Resources */,
+				AE12AA1B20011E2A00D4BF06 /* BreedsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,9 +529,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE53DEF82000723A00089736 /* AppDelegate.swift in Sources */,
-				AE12AA0A200078A500D4BF06 /* NavigationController.swift in Sources */,
+				AE12AA1120011DDF00D4BF06 /* BreedsInteractor.swift in Sources */,
+				AE12AA0A200078A500D4BF06 /* NavController.swift in Sources */,
+				AE12AA1720011E0E00D4BF06 /* BreedsRouter.swift in Sources */,
+				AE12AA1320011DEB00D4BF06 /* BreedsPresentation.swift in Sources */,
 				AE12AA032000760600D4BF06 /* AppConstants.swift in Sources */,
+				AE12AA1920011E1900D4BF06 /* BreedsVC.swift in Sources */,
 				AE12AA052000768500D4BF06 /* AppRouter.swift in Sources */,
+				AE12AA0F20011DD200D4BF06 /* BreedsContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
