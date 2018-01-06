@@ -11,6 +11,10 @@ import UIKit
 protocol BreedsView: class {
   var presenter: BreedsPresentation! { get set }
   
+  func showLoadingIndicator()
+  func hideLoadingIndicator()
+  func showBreedsData(_ breeds: [Breed])
+  func showNoDataScreen()
 }
 
 protocol BreedsPresentation: class {
@@ -28,7 +32,8 @@ protocol BreedsUsesCase: class {
 }
 
 protocol BreedsInteractorOutput: class {
-
+  func breedsFetched(_ breeds: [Breed])
+  func breedsFetchFailed(_ error: Error)
 }
 
 protocol BreedsWireframe: class {

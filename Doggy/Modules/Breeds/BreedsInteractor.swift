@@ -13,10 +13,17 @@ class BreedsInteractor: BreedsUsesCase {
   
   func fetchBreeds() {
     print("Fetching Breed...")
-    ApiClient.sharedInstance.request(API.getBreeds(), onSuccess: { (breedsResponse) in
-      //WIP
+    ApiClient.sharedInstance.request(API.getBreeds(), onSuccess: { (response) in
+      if let breedNames = response.breeds {
+        var breeds: [Breed] = []
+        for breedName in breedNames {
+          breeds.append(Breed(name: breedName))
+        }
+        self.output.breedsFetched(breeds)
+      }
+    
     }) { (error) in
-      //WIP
+      self.output.breedsFetchFailed(error)
     }
   }
 }

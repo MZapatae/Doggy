@@ -24,6 +24,7 @@
 		AE12AA21200162D700D4BF06 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA20200162D700D4BF06 /* ApiClient.swift */; };
 		AE12AA23200166E200D4BF06 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA22200166E200D4BF06 /* API.swift */; };
 		AE12AA272001674700D4BF06 /* BreedsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA262001674700D4BF06 /* BreedsResponse.swift */; };
+		AE12AA2A200170E000D4BF06 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA29200170E000D4BF06 /* Breed.swift */; };
 		AE53DEF82000723A00089736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53DEF72000723A00089736 /* AppDelegate.swift */; };
 		AE53DEFF2000723A00089736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE53DEFE2000723A00089736 /* Assets.xcassets */; };
 		AE53DF022000723A00089736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE53DF002000723A00089736 /* LaunchScreen.storyboard */; };
@@ -68,6 +69,7 @@
 		AE12AA20200162D700D4BF06 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		AE12AA22200166E200D4BF06 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		AE12AA262001674700D4BF06 /* BreedsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsResponse.swift; sourceTree = "<group>"; };
+		AE12AA29200170E000D4BF06 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		AE53DEF42000723A00089736 /* Doggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE53DEF72000723A00089736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE53DEFE2000723A00089736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		AE12AA242001671F00D4BF06 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				AE12AA28200170CF00D4BF06 /* DataModel */,
 				AE12AA252001672900D4BF06 /* ResponseModel */,
 			);
 			path = Entities;
@@ -227,6 +230,14 @@
 				AE12AA262001674700D4BF06 /* BreedsResponse.swift */,
 			);
 			path = ResponseModel;
+			sourceTree = "<group>";
+		};
+		AE12AA28200170CF00D4BF06 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				AE12AA29200170E000D4BF06 /* Breed.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		AE53DEEB2000723A00089736 = {
@@ -585,6 +596,7 @@
 				AE12AA1F2001615A00D4BF06 /* Endpoint.swift in Sources */,
 				AE12AA1320011DEB00D4BF06 /* BreedsPresentation.swift in Sources */,
 				AE12AA032000760600D4BF06 /* AppConstants.swift in Sources */,
+				AE12AA2A200170E000D4BF06 /* Breed.swift in Sources */,
 				AE12AA1920011E1900D4BF06 /* BreedsVC.swift in Sources */,
 				AE12AA052000768500D4BF06 /* AppRouter.swift in Sources */,
 				AE12AA23200166E200D4BF06 /* API.swift in Sources */,

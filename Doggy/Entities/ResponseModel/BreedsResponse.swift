@@ -10,7 +10,7 @@ import ObjectMapper
 
 struct BreedsResponse {
   var status: String?
-  var message: [String]?
+  var breeds: [String]?
 }
 
 extension BreedsResponse: Mappable {
@@ -21,6 +21,6 @@ extension BreedsResponse: Mappable {
   
   mutating func mapping(map: Map) {
     status <- map["status"]
-    message <- map["message"]
+    breeds <- map["message"]
   }
 }

@@ -24,4 +24,21 @@ class BreedsVC: UIViewController {
 
 extension BreedsVC: BreedsView {
   
+  func showLoadingIndicator() {
+    //code
+  }
+  
+  func hideLoadingIndicator() {
+    //code
+  }
+  
+  func showBreedsData(_ breeds: [Breed]) {
+    //code
+  }
+  
+  func showNoDataScreen() {
+    //code
+  }
+  
+  
 }
