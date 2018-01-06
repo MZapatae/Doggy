@@ -6,4 +6,16 @@
 //  Copyright © 2018 Miguel A. Zapata. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class AppRouter {
+  
+  func setupRootScreen(in window: UIWindow) {
+    
+  }
+  
+  fileprivate func presentView(viewController: UIViewController, in window: UIWindow) {
+    
+  }
+  
+}
