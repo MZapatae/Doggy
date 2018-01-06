@@ -7,5 +7,5 @@
 //
 
 enum AppConstants {
-  //TODO: Constants here!
+  static let apiUrl = "https://dog.ceo"
 }

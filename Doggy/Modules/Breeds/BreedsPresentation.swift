@@ -12,6 +12,10 @@ class BreedsPresenter: BreedsPresentation {
   weak var view: BreedsView?
   var interactor: BreedsUsesCase!
   var router: BreedsWireframe!
+  
+  func viewDidLoad() {
+    interactor.fetchBreeds()
+  }
 }
 
 extension BreedsPresenter: BreedsInteractorOutput {

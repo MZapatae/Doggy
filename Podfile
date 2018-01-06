@@ -6,6 +6,8 @@ target 'Doggy' do
   use_frameworks!
 
   # Pods for Doggy
+  pod 'Alamofire', '~> 4.5.1'
+  pod 'ObjectMapper', '~> 3.0'
 
   target 'DoggyTests' do
     inherit! :search_paths

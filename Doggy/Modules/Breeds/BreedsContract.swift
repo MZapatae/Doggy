@@ -11,7 +11,6 @@ import UIKit
 protocol BreedsView: class {
   var presenter: BreedsPresentation! { get set }
   
-  //Methods to communicate Presenter -> View
 }
 
 protocol BreedsPresentation: class {
@@ -19,24 +18,22 @@ protocol BreedsPresentation: class {
   var interactor: BreedsUsesCase! { get set }
   var router: BreedsWireframe! { get set }
   
-  //Methods to communicate and notify from View -> Presenter
+  func viewDidLoad()
 }
 
 protocol BreedsUsesCase: class {
   weak var output: BreedsInteractorOutput! { get set }
   
-  //Methods to communicate Presenter -> Interactor
+  func fetchBreeds()
 }
 
 protocol BreedsInteractorOutput: class {
-  
-  //Methods to communicate Interactor -> Presenter
+
 }
 
 protocol BreedsWireframe: class {
   weak var viewController: UIViewController? { get set }
   
-  //Methods to communicate Presenter -> Router
   static func assembleModule() -> UIViewController
 }
 

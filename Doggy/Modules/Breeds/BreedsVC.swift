@@ -13,6 +13,11 @@ class BreedsVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    configureView()
+    presenter.viewDidLoad()
+  }
+  
+  func configureView() {
     navigationItem.title = "Razas"
   }
 }

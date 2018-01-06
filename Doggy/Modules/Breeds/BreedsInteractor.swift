@@ -10,4 +10,13 @@ import Foundation
 
 class BreedsInteractor: BreedsUsesCase {
   weak var output: BreedsInteractorOutput!
+  
+  func fetchBreeds() {
+    print("Fetching Breed...")
+    ApiClient.sharedInstance.request(API.getBreeds(), onSuccess: { (breedsResponse) in
+      //WIP
+    }) { (error) in
+      //WIP
+    }
+  }
 }
