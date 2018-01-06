@@ -10,9 +10,11 @@
 		2984F4F3EAD7A4145AA70B08 /* Pods_Doggy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5DFC68C9A904E363239EE9 /* Pods_Doggy.framework */; };
 		349D99ED62977D6704429F82 /* Pods_DoggyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0162DBF97A535BA07FDFADB1 /* Pods_DoggyUITests.framework */; };
 		9F84140F8AE4B3A3BB32A16A /* Pods_DoggyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C8F47F09F25F4544190906 /* Pods_DoggyTests.framework */; };
+		AE12AA032000760600D4BF06 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA022000760600D4BF06 /* AppConstants.swift */; };
+		AE12AA052000768500D4BF06 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA042000768500D4BF06 /* AppRouter.swift */; };
+		AE12AA0A200078A500D4BF06 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA09200078A500D4BF06 /* NavigationController.swift */; };
+		AE12AA0C2000790700D4BF06 /* UIColor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE12AA0B2000790700D4BF06 /* UIColor.xcassets */; };
 		AE53DEF82000723A00089736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53DEF72000723A00089736 /* AppDelegate.swift */; };
-		AE53DEFA2000723A00089736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53DEF92000723A00089736 /* ViewController.swift */; };
-		AE53DEFD2000723A00089736 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE53DEFB2000723A00089736 /* Main.storyboard */; };
 		AE53DEFF2000723A00089736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE53DEFE2000723A00089736 /* Assets.xcassets */; };
 		AE53DF022000723A00089736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE53DF002000723A00089736 /* LaunchScreen.storyboard */; };
 		AE53DF0D2000723A00089736 /* DoggyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53DF0C2000723A00089736 /* DoggyTests.swift */; };
@@ -42,10 +44,12 @@
 		872525DB9F98F8F72FAB2C07 /* Pods-DoggyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoggyUITests/Pods-DoggyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		87E0117B2C1B3E6E424F1966 /* Pods-DoggyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoggyUITests/Pods-DoggyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8DBC4F41D9E32AFE450D13C9 /* Pods-Doggy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doggy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doggy/Pods-Doggy.debug.xcconfig"; sourceTree = "<group>"; };
+		AE12AA022000760600D4BF06 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		AE12AA042000768500D4BF06 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		AE12AA09200078A500D4BF06 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		AE12AA0B2000790700D4BF06 /* UIColor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UIColor.xcassets; sourceTree = "<group>"; };
 		AE53DEF42000723A00089736 /* Doggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE53DEF72000723A00089736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE53DEF92000723A00089736 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AE53DEFC2000723A00089736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE53DEFE2000723A00089736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE53DF012000723A00089736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE53DF032000723A00089736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +116,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AE12AA002000750D00D4BF06 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AE12AA012000753E00D4BF06 /* Commons */,
+				AE53DEF72000723A00089736 /* AppDelegate.swift */,
+				AE12AA022000760600D4BF06 /* AppConstants.swift */,
+				AE12AA042000768500D4BF06 /* AppRouter.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AE12AA012000753E00D4BF06 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				AE53DF002000723A00089736 /* LaunchScreen.storyboard */,
+				AE53DF032000723A00089736 /* Info.plist */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		AE12AA062000771A00D4BF06 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE53DEFE2000723A00089736 /* Assets.xcassets */,
+				AE12AA0B2000790700D4BF06 /* UIColor.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AE12AA072000782600D4BF06 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AE12AA082000783300D4BF06 /* Core */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AE12AA082000783300D4BF06 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AE12AA09200078A500D4BF06 /* NavigationController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		AE53DEEB2000723A00089736 = {
 			isa = PBXGroup;
 			children = (
@@ -137,12 +186,9 @@
 		AE53DEF62000723A00089736 /* Doggy */ = {
 			isa = PBXGroup;
 			children = (
-				AE53DEF72000723A00089736 /* AppDelegate.swift */,
-				AE53DEF92000723A00089736 /* ViewController.swift */,
-				AE53DEFB2000723A00089736 /* Main.storyboard */,
-				AE53DEFE2000723A00089736 /* Assets.xcassets */,
-				AE53DF002000723A00089736 /* LaunchScreen.storyboard */,
-				AE53DF032000723A00089736 /* Info.plist */,
+				AE12AA002000750D00D4BF06 /* Application */,
+				AE12AA072000782600D4BF06 /* Modules */,
+				AE12AA062000771A00D4BF06 /* Resources */,
 			);
 			path = Doggy;
 			sourceTree = "<group>";
@@ -281,9 +327,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE12AA0C2000790700D4BF06 /* UIColor.xcassets in Resources */,
 				AE53DF022000723A00089736 /* LaunchScreen.storyboard in Resources */,
 				AE53DEFF2000723A00089736 /* Assets.xcassets in Resources */,
-				AE53DEFD2000723A00089736 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,8 +501,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE53DEFA2000723A00089736 /* ViewController.swift in Sources */,
 				AE53DEF82000723A00089736 /* AppDelegate.swift in Sources */,
+				AE12AA0A200078A500D4BF06 /* NavigationController.swift in Sources */,
+				AE12AA032000760600D4BF06 /* AppConstants.swift in Sources */,
+				AE12AA052000768500D4BF06 /* AppRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,14 +540,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AE53DEFB2000723A00089736 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AE53DEFC2000723A00089736 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AE53DF002000723A00089736 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -625,7 +665,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SWYA59BA6P;
-				INFOPLIST_FILE = Doggy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Doggy/Application/Commons/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cl.mzapatae.Doggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -641,7 +682,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SWYA59BA6P;
-				INFOPLIST_FILE = Doggy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Doggy/Application/Commons/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cl.mzapatae.Doggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
