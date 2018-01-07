@@ -13,10 +13,27 @@ class BreedDetailVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    presenter.viewDidLoad()
   }
   
 }
 
 extension BreedDetailVC: BreedDetailView {
+  
+  func showLoadingIndicator() {
+    //code
+  }
+  
+  func hideLoadingIndicator() {
+    //code
+  }
+  
+  func showBreedImagesData(_ breedImages: [BreedImage]) {
+    //code
+  }
+  
+  func showNoDataScreen() {
+    //code
+  }
   
 }

@@ -28,8 +28,8 @@ class BreedsRouter: BreedsWireframe {
     return navigation
   }
   
-  func pushBreedDetail(breedName: String) {
-    let breedDetailVC = BreedDetailRouter.assembleModule()
+  func pushBreedDetail(breedName name: String) {
+    let breedDetailVC = BreedDetailRouter.assembleModule(breedName: name)
     viewController?.navigationController?.pushViewController(breedDetailVC, animated: true)
   }
 }

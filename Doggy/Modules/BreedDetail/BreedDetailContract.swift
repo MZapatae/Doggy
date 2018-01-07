@@ -11,6 +11,10 @@ import UIKit
 protocol BreedDetailView: class {
   var presenter: BreedDetailPresentation! { get set }
   
+  func showLoadingIndicator()
+  func hideLoadingIndicator()
+  func showBreedImagesData(_ breedImages: [BreedImage])
+  func showNoDataScreen()
 }
 
 protocol BreedDetailPresentation: class {
@@ -18,20 +22,23 @@ protocol BreedDetailPresentation: class {
   var interactor: BreedDetailUsesCase! { get set }
   var router: BreedDetailWireframe! { get set }
   
+  func viewDidLoad()
 }
 
 protocol BreedDetailUsesCase: class {
   weak var output: BreedDetailInteractorOutput! { get set }
   
+  func fetchBreedImages(breedName: String)
 }
 
 protocol BreedDetailInteractorOutput: class {
-  
+  func breedImagesFetched(_ breedImages: [BreedImage])
+  func breedImagesFetchFailed(_ error: Error)
 }
 
 protocol BreedDetailWireframe: class {
   weak var viewController: UIViewController? { get set }
   
-  static func assembleModule() -> UIViewController
+  static func assembleModule(breedName: String) -> UIViewController
 }
 

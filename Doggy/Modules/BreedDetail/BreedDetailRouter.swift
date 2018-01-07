@@ -12,7 +12,7 @@ class BreedDetailRouter: BreedDetailWireframe {
   
   weak var viewController: UIViewController?
   
-  static func assembleModule() -> UIViewController {
+  static func assembleModule(breedName: String) -> UIViewController {
     let view = BreedDetailVC(nibName: "BreedDetailView", bundle: nil)
     let presenter = BreedDetailPresenter()
     let interactor = BreedDetailInteractor()
@@ -23,6 +23,7 @@ class BreedDetailRouter: BreedDetailWireframe {
     presenter.view = view
     presenter.interactor = interactor
     presenter.router = router
+    presenter.selectedBreedName = breedName
     
     interactor.output = presenter
     

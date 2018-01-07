@@ -9,7 +9,12 @@
 import Foundation
 
 enum API {
+  
   static func getBreeds() -> Endpoint<BreedsResponse> {
     return Endpoint<BreedsResponse>(method: .get, path: "/api/breeds/list")
+  }
+  
+  static func getBreedImages(breedName: String) -> Endpoint<BreedImagesResponse> {
+    return Endpoint<BreedImagesResponse>(method: .get, path: "/api/breed/\(breedName)/images")
   }
 }
