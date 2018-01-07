@@ -25,6 +25,12 @@
 		AE12AA23200166E200D4BF06 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA22200166E200D4BF06 /* API.swift */; };
 		AE12AA272001674700D4BF06 /* BreedsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA262001674700D4BF06 /* BreedsResponse.swift */; };
 		AE12AA2A200170E000D4BF06 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA29200170E000D4BF06 /* Breed.swift */; };
+		AE12AA302001919900D4BF06 /* BreedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA2E2001919900D4BF06 /* BreedViewCell.swift */; };
+		AE12AA312001919900D4BF06 /* BreedViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE12AA2F2001919900D4BF06 /* BreedViewCell.xib */; };
+		AE12AA38200196B100D4BF06 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA37200196B100D4BF06 /* ReusableView.swift */; };
+		AE12AA3A2001984900D4BF06 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA392001984900D4BF06 /* NibLoadableView.swift */; };
+		AE12AA3D20019ABE00D4BF06 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA3C20019ABE00D4BF06 /* UITableViewExtension.swift */; };
+		AE12AA3F2001AF3300D4BF06 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12AA3E2001AF3300D4BF06 /* UITableViewCellExtension.swift */; };
 		AE53DEF82000723A00089736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53DEF72000723A00089736 /* AppDelegate.swift */; };
 		AE53DEFF2000723A00089736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE53DEFE2000723A00089736 /* Assets.xcassets */; };
 		AE53DF022000723A00089736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE53DF002000723A00089736 /* LaunchScreen.storyboard */; };
@@ -70,6 +76,12 @@
 		AE12AA22200166E200D4BF06 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		AE12AA262001674700D4BF06 /* BreedsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsResponse.swift; sourceTree = "<group>"; };
 		AE12AA29200170E000D4BF06 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		AE12AA2E2001919900D4BF06 /* BreedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewCell.swift; sourceTree = "<group>"; };
+		AE12AA2F2001919900D4BF06 /* BreedViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedViewCell.xib; sourceTree = "<group>"; };
+		AE12AA37200196B100D4BF06 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		AE12AA392001984900D4BF06 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		AE12AA3C20019ABE00D4BF06 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		AE12AA3E2001AF3300D4BF06 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		AE53DEF42000723A00089736 /* Doggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE53DEF72000723A00089736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE53DEFE2000723A00089736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -187,12 +199,12 @@
 		AE12AA0D20011D9500D4BF06 /* Breeds */ = {
 			isa = PBXGroup;
 			children = (
+				AE12AA2B200182A500D4BF06 /* Views */,
 				AE12AA0E20011DD200D4BF06 /* BreedsContract.swift */,
 				AE12AA1020011DDF00D4BF06 /* BreedsInteractor.swift */,
 				AE12AA1220011DEB00D4BF06 /* BreedsPresentation.swift */,
 				AE12AA1620011E0E00D4BF06 /* BreedsRouter.swift */,
 				AE12AA1820011E1900D4BF06 /* BreedsVC.swift */,
-				AE12AA1A20011E2A00D4BF06 /* BreedsView.xib */,
 			);
 			path = Breeds;
 			sourceTree = "<group>";
@@ -240,6 +252,32 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		AE12AA2B200182A500D4BF06 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE12AA1A20011E2A00D4BF06 /* BreedsView.xib */,
+				AE12AA2F2001919900D4BF06 /* BreedViewCell.xib */,
+				AE12AA2E2001919900D4BF06 /* BreedViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE12AA32200193C900D4BF06 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AE12AA362001968C00D4BF06 /* UIKit */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AE12AA362001968C00D4BF06 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				AE82D0522001BD6300A4ADAD /* UITableView */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		AE53DEEB2000723A00089736 = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +307,7 @@
 				AE12AA242001671F00D4BF06 /* Entities */,
 				AE12AA072000782600D4BF06 /* Modules */,
 				AE12AA1C200160BC00D4BF06 /* DataManager */,
+				AE12AA32200193C900D4BF06 /* Helpers */,
 				AE12AA062000771A00D4BF06 /* Resources */,
 			);
 			path = Doggy;
@@ -290,6 +329,17 @@
 				AE53DF192000723A00089736 /* Info.plist */,
 			);
 			path = DoggyUITests;
+			sourceTree = "<group>";
+		};
+		AE82D0522001BD6300A4ADAD /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				AE12AA37200196B100D4BF06 /* ReusableView.swift */,
+				AE12AA392001984900D4BF06 /* NibLoadableView.swift */,
+				AE12AA3C20019ABE00D4BF06 /* UITableViewExtension.swift */,
+				AE12AA3E2001AF3300D4BF06 /* UITableViewCellExtension.swift */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +462,7 @@
 				AE53DF022000723A00089736 /* LaunchScreen.storyboard in Resources */,
 				AE53DEFF2000723A00089736 /* Assets.xcassets in Resources */,
 				AE12AA1B20011E2A00D4BF06 /* BreedsView.xib in Resources */,
+				AE12AA312001919900D4BF06 /* BreedViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,11 +507,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Doggy/Pods-Doggy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -600,7 +653,12 @@
 				AE12AA1920011E1900D4BF06 /* BreedsVC.swift in Sources */,
 				AE12AA052000768500D4BF06 /* AppRouter.swift in Sources */,
 				AE12AA23200166E200D4BF06 /* API.swift in Sources */,
+				AE12AA302001919900D4BF06 /* BreedViewCell.swift in Sources */,
+				AE12AA3F2001AF3300D4BF06 /* UITableViewCellExtension.swift in Sources */,
 				AE12AA272001674700D4BF06 /* BreedsResponse.swift in Sources */,
+				AE12AA38200196B100D4BF06 /* ReusableView.swift in Sources */,
+				AE12AA3D20019ABE00D4BF06 /* UITableViewExtension.swift in Sources */,
+				AE12AA3A2001984900D4BF06 /* NibLoadableView.swift in Sources */,
 				AE12AA0F20011DD200D4BF06 /* BreedsContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,38 +7,78 @@
 //
 
 import UIKit
+import PKHUD
 
 class BreedsVC: UIViewController {
+  @IBOutlet weak var breedsTableView: UITableView!
+  
   var presenter: BreedsPresentation!
+  
+  var breeds: [Breed] = [] {
+    didSet {
+      breedsTableView.reloadData()
+    }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    configureView()
+    setupView()
     presenter.viewDidLoad()
   }
   
-  func configureView() {
+  func setupView() {
     navigationItem.title = "Razas"
+    breedsTableView.delegate = self
+    breedsTableView.dataSource = self
+    breedsTableView.register(BreedViewCell.self)
   }
 }
+
+//Mark: BreedsView methods
 
 extension BreedsVC: BreedsView {
   
   func showLoadingIndicator() {
-    //code
+    HUD.show(.progress)
   }
   
   func hideLoadingIndicator() {
-    //code
+    HUD.hide()
   }
   
   func showBreedsData(_ breeds: [Breed]) {
-    //code
+    self.breeds = breeds
   }
   
   func showNoDataScreen() {
-    //code
+    //TODO: code
   }
   
+}
+
+//Mark: UITableView Delegate methods
+
+extension BreedsVC: UITableViewDelegate {
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //TODO: Code
+  }
   
 }
+
+//Mark: UITableView Datasource methods
+
+extension BreedsVC: UITableViewDataSource {
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return breeds.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as BreedViewCell
+    cell.setupCell(breeds[indexPath.row])
+    return cell
+  }
+
+}
+
