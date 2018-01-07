@@ -8,13 +8,13 @@
 
 import UIKit
 
-class NavigationController: UINavigationController {
+class NavController: UINavigationController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    navigationBar.isTranslucent = true
-    navigationBar.barTintColor = UIColor(named: "NavigationBar")
-    navigationItem.title = "Doggy"
+    self.navigationBar.isTranslucent = false
+    self.navigationBar.barTintColor = UIColor.init(named: "NavigationBar")
   }
+  
 }
 

@@ -11,11 +11,13 @@ import UIKit
 class AppRouter {
   
   func setupRootScreen(in window: UIWindow) {
-    
+    let breedsVC = BreedsRouter.assembleModule()
+    presentView(viewController: breedsVC, in: window)
   }
   
   fileprivate func presentView(viewController: UIViewController, in window: UIWindow) {
-    
+    window.makeKeyAndVisible()
+    window.rootViewController = viewController
   }
   
 }
