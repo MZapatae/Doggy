@@ -9,6 +9,7 @@
 import UIKit
 
 class BreedsRouter: BreedsWireframe {
+  
   weak var viewController: UIViewController?
   
   static func assembleModule() -> UIViewController {
@@ -26,4 +27,10 @@ class BreedsRouter: BreedsWireframe {
     router.viewController = view
     return navigation
   }
+  
+  func pushBreedDetail(breedName: String) {
+    let breedDetailVC = BreedDetailRouter.assembleModule()
+    viewController?.navigationController?.pushViewController(breedDetailVC, animated: true)
+  }
 }
+

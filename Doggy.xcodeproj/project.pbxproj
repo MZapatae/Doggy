@@ -36,6 +36,12 @@
 		AE53DF022000723A00089736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE53DF002000723A00089736 /* LaunchScreen.storyboard */; };
 		AE53DF0D2000723A00089736 /* DoggyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53DF0C2000723A00089736 /* DoggyTests.swift */; };
 		AE53DF182000723A00089736 /* DoggyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53DF172000723A00089736 /* DoggyUITests.swift */; };
+		AE82D0552001C2EA00A4ADAD /* BreedDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82D0542001C2EA00A4ADAD /* BreedDetailContract.swift */; };
+		AE82D0572001C35F00A4ADAD /* BreedDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82D0562001C35F00A4ADAD /* BreedDetailInteractor.swift */; };
+		AE82D0592001C39400A4ADAD /* BreedDetailPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82D0582001C39400A4ADAD /* BreedDetailPresentation.swift */; };
+		AE82D05B2001C3DE00A4ADAD /* BreedDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82D05A2001C3DE00A4ADAD /* BreedDetailRouter.swift */; };
+		AE82D0612001C46C00A4ADAD /* BreedDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82D0602001C46C00A4ADAD /* BreedDetailVC.swift */; };
+		AE82D0642001C4AC00A4ADAD /* BreedDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE82D0632001C4AC00A4ADAD /* BreedDetailView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +99,12 @@
 		AE53DF132000723A00089736 /* DoggyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoggyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE53DF172000723A00089736 /* DoggyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoggyUITests.swift; sourceTree = "<group>"; };
 		AE53DF192000723A00089736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE82D0542001C2EA00A4ADAD /* BreedDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailContract.swift; sourceTree = "<group>"; };
+		AE82D0562001C35F00A4ADAD /* BreedDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailInteractor.swift; sourceTree = "<group>"; };
+		AE82D0582001C39400A4ADAD /* BreedDetailPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailPresentation.swift; sourceTree = "<group>"; };
+		AE82D05A2001C3DE00A4ADAD /* BreedDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailRouter.swift; sourceTree = "<group>"; };
+		AE82D0602001C46C00A4ADAD /* BreedDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailVC.swift; sourceTree = "<group>"; };
+		AE82D0632001C4AC00A4ADAD /* BreedDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedDetailView.xib; sourceTree = "<group>"; };
 		B4C8F47F09F25F4544190906 /* Pods_DoggyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoggyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5DFC68C9A904E363239EE9 /* Pods_Doggy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doggy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8C0BC2888D0738D00D04CB /* Pods-DoggyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoggyTests/Pods-DoggyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +196,7 @@
 			children = (
 				AE12AA082000783300D4BF06 /* Core */,
 				AE12AA0D20011D9500D4BF06 /* Breeds */,
+				AE82D0532001C2C000A4ADAD /* BreedDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -342,6 +355,27 @@
 			path = UITableView;
 			sourceTree = "<group>";
 		};
+		AE82D0532001C2C000A4ADAD /* BreedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AE82D0622001C49A00A4ADAD /* Views */,
+				AE82D0542001C2EA00A4ADAD /* BreedDetailContract.swift */,
+				AE82D0562001C35F00A4ADAD /* BreedDetailInteractor.swift */,
+				AE82D0582001C39400A4ADAD /* BreedDetailPresentation.swift */,
+				AE82D05A2001C3DE00A4ADAD /* BreedDetailRouter.swift */,
+				AE82D0602001C46C00A4ADAD /* BreedDetailVC.swift */,
+			);
+			path = BreedDetail;
+			sourceTree = "<group>";
+		};
+		AE82D0622001C49A00A4ADAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE82D0632001C4AC00A4ADAD /* BreedDetailView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -458,6 +492,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE82D0642001C4AC00A4ADAD /* BreedDetailView.xib in Resources */,
 				AE12AA0C2000790700D4BF06 /* UIColor.xcassets in Resources */,
 				AE53DF022000723A00089736 /* LaunchScreen.storyboard in Resources */,
 				AE53DEFF2000723A00089736 /* Assets.xcassets in Resources */,
@@ -645,12 +680,15 @@
 				AE53DEF82000723A00089736 /* AppDelegate.swift in Sources */,
 				AE12AA1120011DDF00D4BF06 /* BreedsInteractor.swift in Sources */,
 				AE12AA0A200078A500D4BF06 /* NavController.swift in Sources */,
+				AE82D0612001C46C00A4ADAD /* BreedDetailVC.swift in Sources */,
 				AE12AA1720011E0E00D4BF06 /* BreedsRouter.swift in Sources */,
 				AE12AA1F2001615A00D4BF06 /* Endpoint.swift in Sources */,
 				AE12AA1320011DEB00D4BF06 /* BreedsPresentation.swift in Sources */,
+				AE82D0552001C2EA00A4ADAD /* BreedDetailContract.swift in Sources */,
 				AE12AA032000760600D4BF06 /* AppConstants.swift in Sources */,
 				AE12AA2A200170E000D4BF06 /* Breed.swift in Sources */,
 				AE12AA1920011E1900D4BF06 /* BreedsVC.swift in Sources */,
+				AE82D05B2001C3DE00A4ADAD /* BreedDetailRouter.swift in Sources */,
 				AE12AA052000768500D4BF06 /* AppRouter.swift in Sources */,
 				AE12AA23200166E200D4BF06 /* API.swift in Sources */,
 				AE12AA302001919900D4BF06 /* BreedViewCell.swift in Sources */,
@@ -659,7 +697,9 @@
 				AE12AA38200196B100D4BF06 /* ReusableView.swift in Sources */,
 				AE12AA3D20019ABE00D4BF06 /* UITableViewExtension.swift in Sources */,
 				AE12AA3A2001984900D4BF06 /* NibLoadableView.swift in Sources */,
+				AE82D0572001C35F00A4ADAD /* BreedDetailInteractor.swift in Sources */,
 				AE12AA0F20011DD200D4BF06 /* BreedsContract.swift in Sources */,
+				AE82D0592001C39400A4ADAD /* BreedDetailPresentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 import Foundation
 
 class BreedsPresenter: BreedsPresentation {
+
   weak var view: BreedsView?
   var interactor: BreedsUsesCase!
   var router: BreedsWireframe!
@@ -26,6 +27,10 @@ class BreedsPresenter: BreedsPresentation {
   func viewDidLoad() {
     view?.showLoadingIndicator()
     interactor.fetchBreeds()
+  }
+  
+  func didSelectedBrew(_ breed: Breed) {
+    router.pushBreedDetail(breedName: breed.name)
   }
 }
 

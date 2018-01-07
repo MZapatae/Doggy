@@ -23,6 +23,7 @@ protocol BreedsPresentation: class {
   var router: BreedsWireframe! { get set }
   
   func viewDidLoad()
+  func didSelectedBrew(_ breed: Breed)
 }
 
 protocol BreedsUsesCase: class {
@@ -40,5 +41,7 @@ protocol BreedsWireframe: class {
   weak var viewController: UIViewController? { get set }
   
   static func assembleModule() -> UIViewController
+  
+  func pushBreedDetail(breedName name: String)
 }
 
