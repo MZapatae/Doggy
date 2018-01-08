@@ -9,6 +9,7 @@
 import Foundation
 
 class BreedsPresenter: BreedsPresentation {
+
   weak var view: BreedsView?
   var interactor: BreedsUsesCase!
   var router: BreedsWireframe!
@@ -27,6 +28,10 @@ class BreedsPresenter: BreedsPresentation {
     view?.showLoadingIndicator()
     interactor.fetchBreeds()
   }
+  
+  func didSelectedBrew(_ breed: Breed) {
+    router.pushBreedDetail(breedName: breed.name)
+  }
 }
 
 extension BreedsPresenter: BreedsInteractorOutput {
@@ -37,8 +42,8 @@ extension BreedsPresenter: BreedsInteractorOutput {
   }
   
   func breedsFetchFailed(_ error: Error) {
-    view?.hideLoadingIndicator()
     view?.showNoDataScreen()
+    view?.hideLoadingIndicator()
     //TODO: Show message with error via Router
   }
   

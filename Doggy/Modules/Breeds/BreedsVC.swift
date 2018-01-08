@@ -48,10 +48,13 @@ extension BreedsVC: BreedsView {
   
   func showBreedsData(_ breeds: [Breed]) {
     self.breeds = breeds
+    breedsTableView.separatorStyle = .singleLine
+    breedsTableView.isHidden = false
   }
   
   func showNoDataScreen() {
-    //TODO: code
+    breedsTableView.separatorStyle = .none
+    breedsTableView.isHidden = true
   }
   
 }
@@ -61,7 +64,8 @@ extension BreedsVC: BreedsView {
 extension BreedsVC: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //TODO: Code
+    presenter.didSelectedBrew(breeds[indexPath.row])
+    tableView.deselectRow(at: indexPath, animated: true)
   }
   
 }
@@ -76,7 +80,7 @@ extension BreedsVC: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as BreedViewCell
-    cell.setupCell(breeds[indexPath.row])
+    cell.setupCellData(breeds[indexPath.row])
     return cell
   }
 

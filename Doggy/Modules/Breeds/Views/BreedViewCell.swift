@@ -11,7 +11,7 @@ import UIKit
 class BreedViewCell: UITableViewCell {
   @IBOutlet weak var breedNameLabel: UILabel!
   
-  func setupCell(_ breed: Breed) {
+  func setupCellData(_ breed: Breed) {
     let uppercaseFirstLetter = breed.name.uppercased().dropLast(breed.name.count - 1)
     let breedNameWithoutFirstLetter = breed.name.dropFirst()
     breedNameLabel.text = "\(uppercaseFirstLetter)\(breedNameWithoutFirstLetter)"

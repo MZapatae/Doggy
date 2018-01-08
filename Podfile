@@ -9,6 +9,7 @@ target 'Doggy' do
   pod 'Alamofire', '~> 4.5.1'
   pod 'ObjectMapper', '~> 3.0'
   pod 'PKHUD', '~> 5.0'
+  pod 'Kingfisher', '~> 4.6.1'
 
   target 'DoggyTests' do
     inherit! :search_paths

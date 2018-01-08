@@ -20,6 +20,12 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Hay Datos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccq-Ui-nlc">
+                    <rect key="frame" x="135" y="323" width="105.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kIn-JX-IDG">
                     <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,8 +38,10 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="kIn-JX-IDG" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="9TR-wM-j74"/>
+                <constraint firstItem="ccq-Ui-nlc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CJ5-cz-GeT"/>
                 <constraint firstItem="kIn-JX-IDG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JFN-Jc-IaC"/>
                 <constraint firstItem="kIn-JX-IDG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QkR-Mx-fR7"/>
+                <constraint firstItem="ccq-Ui-nlc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ved-5P-sRp"/>
                 <constraint firstItem="kIn-JX-IDG" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="XhJ-F7-RUk"/>
                 <constraint firstItem="kIn-JX-IDG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="k02-bD-uRD"/>
             </constraints>
