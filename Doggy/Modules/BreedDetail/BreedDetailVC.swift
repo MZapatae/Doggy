@@ -20,19 +20,24 @@ class BreedDetailVC: UIViewController {
     }
   }
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    setupView()
-    presenter.viewDidLoad()
+  override func viewWillAppear(_ animated: Bool) {
+    presenter.viewWillApeear(animated)
   }
   
-  func setupView() {
-    imagesTableView.dataSource = self
-    imagesTableView.register(BreedImageViewCell.self)
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    presenter.viewDidLoad()
   }
+
 }
 
 extension BreedDetailVC: BreedDetailView {
+  
+  func setupView(navBarTitle: String) {
+    navigationItem.title = navBarTitle
+    imagesTableView.dataSource = self
+    imagesTableView.register(BreedImageViewCell.self)
+  }
   
   func showLoadingIndicator() {
     HUD.show(.progress)

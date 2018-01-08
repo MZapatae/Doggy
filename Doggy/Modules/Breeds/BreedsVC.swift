@@ -20,9 +20,12 @@ class BreedsVC: UIViewController {
     }
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    setupView()
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    setupView()
     presenter.viewDidLoad()
   }
   

@@ -24,6 +24,10 @@ class BreedDetailPresenter: BreedDetailPresentation {
     }
   }
   
+  func viewWillApeear(_ animated: Bool) {
+    view?.setupView(navBarTitle: selectedBreedName)
+  }
+  
   func viewDidLoad() {
     view?.showLoadingIndicator()
     interactor.fetchBreedImages(breedName: selectedBreedName)
@@ -40,5 +44,6 @@ extension BreedDetailPresenter: BreedDetailInteractorOutput {
   func breedImagesFetchFailed(_ error: Error) {
     view?.showNoDataScreen()
     view?.hideLoadingIndicator()
+    router.presentAlertDialog(message: error.localizedDescription)
   }
 }

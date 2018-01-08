@@ -46,6 +46,7 @@
 		AE82D0682002BFDE00A4ADAD /* BreedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82D0672002BFDE00A4ADAD /* BreedImage.swift */; };
 		AE82D06D2002D2A900A4ADAD /* BreedImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82D06B2002D2A900A4ADAD /* BreedImageViewCell.swift */; };
 		AE82D06E2002D2A900A4ADAD /* BreedImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE82D06C2002D2A900A4ADAD /* BreedImageViewCell.xib */; };
+		AE82D0702002F9A000A4ADAD /* AppDelegateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82D06F2002F9A000A4ADAD /* AppDelegateTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		AE82D0672002BFDE00A4ADAD /* BreedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImage.swift; sourceTree = "<group>"; };
 		AE82D06B2002D2A900A4ADAD /* BreedImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImageViewCell.swift; sourceTree = "<group>"; };
 		AE82D06C2002D2A900A4ADAD /* BreedImageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedImageViewCell.xib; sourceTree = "<group>"; };
+		AE82D06F2002F9A000A4ADAD /* AppDelegateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTest.swift; sourceTree = "<group>"; };
 		B4C8F47F09F25F4544190906 /* Pods_DoggyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoggyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5DFC68C9A904E363239EE9 /* Pods_Doggy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doggy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8C0BC2888D0738D00D04CB /* Pods-DoggyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoggyTests/Pods-DoggyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 			children = (
 				AE53DF0C2000723A00089736 /* DoggyTests.swift */,
 				AE53DF0E2000723A00089736 /* Info.plist */,
+				AE82D06F2002F9A000A4ADAD /* AppDelegateTest.swift */,
 			);
 			path = DoggyTests;
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE82D0702002F9A000A4ADAD /* AppDelegateTest.swift in Sources */,
 				AE53DF0D2000723A00089736 /* DoggyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
