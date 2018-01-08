@@ -13,6 +13,7 @@ class BreedImageViewCell: UITableViewCell {
   @IBOutlet weak var breedImage: UIImageView!
   
   func setupCellData(imageUrl: String)  {
+    KingfisherManager.shared.cache.clearMemoryCache()
     breedImage.kf.setImage(with: URL(string: imageUrl))
   }
 }
