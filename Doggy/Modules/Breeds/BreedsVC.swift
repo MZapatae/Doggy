@@ -80,7 +80,7 @@ extension BreedsVC: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as BreedViewCell
-    cell.setupCell(breeds[indexPath.row])
+    cell.setupCellData(breeds[indexPath.row])
     return cell
   }
 

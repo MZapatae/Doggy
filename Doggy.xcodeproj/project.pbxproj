@@ -44,6 +44,8 @@
 		AE82D0642001C4AC00A4ADAD /* BreedDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE82D0632001C4AC00A4ADAD /* BreedDetailView.xib */; };
 		AE82D0662002BC7200A4ADAD /* BreedImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82D0652002BC7200A4ADAD /* BreedImagesResponse.swift */; };
 		AE82D0682002BFDE00A4ADAD /* BreedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82D0672002BFDE00A4ADAD /* BreedImage.swift */; };
+		AE82D06D2002D2A900A4ADAD /* BreedImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82D06B2002D2A900A4ADAD /* BreedImageViewCell.swift */; };
+		AE82D06E2002D2A900A4ADAD /* BreedImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE82D06C2002D2A900A4ADAD /* BreedImageViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		AE82D0632001C4AC00A4ADAD /* BreedDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedDetailView.xib; sourceTree = "<group>"; };
 		AE82D0652002BC7200A4ADAD /* BreedImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesResponse.swift; sourceTree = "<group>"; };
 		AE82D0672002BFDE00A4ADAD /* BreedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImage.swift; sourceTree = "<group>"; };
+		AE82D06B2002D2A900A4ADAD /* BreedImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImageViewCell.swift; sourceTree = "<group>"; };
+		AE82D06C2002D2A900A4ADAD /* BreedImageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedImageViewCell.xib; sourceTree = "<group>"; };
 		B4C8F47F09F25F4544190906 /* Pods_DoggyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoggyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5DFC68C9A904E363239EE9 /* Pods_Doggy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doggy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8C0BC2888D0738D00D04CB /* Pods-DoggyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoggyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoggyTests/Pods-DoggyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -378,6 +382,8 @@
 			isa = PBXGroup;
 			children = (
 				AE82D0632001C4AC00A4ADAD /* BreedDetailView.xib */,
+				AE82D06C2002D2A900A4ADAD /* BreedImageViewCell.xib */,
+				AE82D06B2002D2A900A4ADAD /* BreedImageViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -503,6 +509,7 @@
 				AE53DF022000723A00089736 /* LaunchScreen.storyboard in Resources */,
 				AE53DEFF2000723A00089736 /* Assets.xcassets in Resources */,
 				AE12AA1B20011E2A00D4BF06 /* BreedsView.xib in Resources */,
+				AE82D06E2002D2A900A4ADAD /* BreedImageViewCell.xib in Resources */,
 				AE12AA312001919900D4BF06 /* BreedViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,12 +554,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Doggy/Pods-Doggy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 			);
@@ -688,6 +697,7 @@
 				AE12AA1120011DDF00D4BF06 /* BreedsInteractor.swift in Sources */,
 				AE12AA0A200078A500D4BF06 /* NavController.swift in Sources */,
 				AE82D0612001C46C00A4ADAD /* BreedDetailVC.swift in Sources */,
+				AE82D06D2002D2A900A4ADAD /* BreedImageViewCell.swift in Sources */,
 				AE12AA1720011E0E00D4BF06 /* BreedsRouter.swift in Sources */,
 				AE12AA1F2001615A00D4BF06 /* Endpoint.swift in Sources */,
 				AE12AA1320011DEB00D4BF06 /* BreedsPresentation.swift in Sources */,

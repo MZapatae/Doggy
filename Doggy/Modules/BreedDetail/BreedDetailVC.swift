@@ -7,33 +7,64 @@
 //
 
 import UIKit
+import PKHUD
 
 class BreedDetailVC: UIViewController {
+  @IBOutlet weak var imagesTableView: UITableView!
+  
   var presenter: BreedDetailPresentation!
+  
+  var breedImages: [BreedImage] = [] {
+    didSet {
+      imagesTableView.reloadData()
+    }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupView()
     presenter.viewDidLoad()
   }
   
+  func setupView() {
+    imagesTableView.dataSource = self
+    imagesTableView.register(BreedImageViewCell.self)
+  }
 }
 
 extension BreedDetailVC: BreedDetailView {
   
   func showLoadingIndicator() {
-    //code
+    HUD.show(.progress)
   }
   
   func hideLoadingIndicator() {
-    //code
+    HUD.hide()
   }
   
   func showBreedImagesData(_ breedImages: [BreedImage]) {
-    //code
+    self.breedImages = breedImages
+    imagesTableView.separatorStyle = .singleLine
+    imagesTableView.isHidden = false
   }
   
   func showNoDataScreen() {
-    //code
+    imagesTableView.separatorStyle = .none
+    imagesTableView.isHidden = true
+  }
+  
+}
+
+extension BreedDetailVC: UITableViewDataSource {
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return breedImages.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as BreedImageViewCell
+    cell.setupCellData(imageUrl: breedImages[indexPath.row].imageUrl)
+    return cell
   }
   
 }
