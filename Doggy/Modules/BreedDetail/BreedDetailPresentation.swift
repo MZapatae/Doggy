@@ -44,5 +44,6 @@ extension BreedDetailPresenter: BreedDetailInteractorOutput {
   func breedImagesFetchFailed(_ error: Error) {
     view?.showNoDataScreen()
     view?.hideLoadingIndicator()
+    router.presentAlertDialog(message: error.localizedDescription)
   }
 }

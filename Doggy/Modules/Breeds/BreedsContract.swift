@@ -43,5 +43,6 @@ protocol BreedsWireframe: class {
   static func assembleModule() -> UIViewController
   
   func pushBreedDetail(breedName name: String)
+  func presentAlertDialog(message: String)
 }
 

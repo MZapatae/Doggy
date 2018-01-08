@@ -42,5 +42,6 @@ protocol BreedDetailWireframe: class {
   weak var viewController: UIViewController? { get set }
   
   static func assembleModule(breedName: String) -> UIViewController
+  func presentAlertDialog(message: String)
 }
 

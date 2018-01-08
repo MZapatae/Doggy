@@ -31,4 +31,10 @@ class BreedDetailRouter: BreedDetailWireframe {
     
     return view
   }
+  
+  func presentAlertDialog(message: String) {
+    let alert = UIAlertController(title: "Alerta", message: message, preferredStyle: UIAlertControllerStyle.alert)
+    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+    viewController?.present(alert, animated: true, completion: nil)
+  }
 }

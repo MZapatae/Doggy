@@ -44,7 +44,7 @@ extension BreedsPresenter: BreedsInteractorOutput {
   func breedsFetchFailed(_ error: Error) {
     view?.showNoDataScreen()
     view?.hideLoadingIndicator()
-    //TODO: Show message with error via Router
+    router.presentAlertDialog(message: error.localizedDescription)
   }
   
 }
