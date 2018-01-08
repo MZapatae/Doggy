@@ -15,6 +15,7 @@ protocol BreedDetailView: class {
   func hideLoadingIndicator()
   func showBreedImagesData(_ breedImages: [BreedImage])
   func showNoDataScreen()
+  func setupView(navBarTitle: String)
 }
 
 protocol BreedDetailPresentation: class {
@@ -22,6 +23,7 @@ protocol BreedDetailPresentation: class {
   var interactor: BreedDetailUsesCase! { get set }
   var router: BreedDetailWireframe! { get set }
   
+  func viewWillApeear(_ animated: Bool) 
   func viewDidLoad()
 }
 

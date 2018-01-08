@@ -24,6 +24,10 @@ class BreedDetailPresenter: BreedDetailPresentation {
     }
   }
   
+  func viewWillApeear(_ animated: Bool) {
+    view?.setupView(navBarTitle: selectedBreedName)
+  }
+  
   func viewDidLoad() {
     view?.showLoadingIndicator()
     interactor.fetchBreedImages(breedName: selectedBreedName)
